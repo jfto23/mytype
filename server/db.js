@@ -1,12 +1,17 @@
 const mysql = require("mysql");
 
-const pool = mysql.createPool({
+
+let pool = mysql.createPool({
 	connectionLimit: 10,
-        host: "localhost",
-        user: "root",
-        password: "samsung23",
-        database: "notypo_schema"
+	host: "localhost",
+	user: "root",
+	password: "password",
+	database: "notypo_schema"
 });
+
+if (process.env.JAWSDB_URL) {
+	let pool = mysql.createPool(process.env.JAWSDB_URL);
+}
 
 module.exports = pool;
 
