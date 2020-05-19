@@ -34,6 +34,7 @@ router.delete("/:text_id", (req, res) => {
 				});
 			}
 			else {
+				connection.release();
 				res.status(200).send("THERE ARE 3 SCORES OR LESS FOR THIS TEXT. NOTHING DELETED");
 			}
 		});
