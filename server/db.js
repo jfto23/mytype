@@ -10,7 +10,7 @@ let pool = mysql.createPool({
 });
 
 if (process.env.JAWSDB_URL) {
-	let pool = mysql.createPool(process.env.JAWSDB_URL);
+	pool = mysql.createPool(process.env.JAWSDB_URL);
 }
 
 module.exports = pool;
