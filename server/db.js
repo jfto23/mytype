@@ -3,10 +3,11 @@ const mysql = require("mysql");
 
 let pool = mysql.createPool({
 	connectionLimit: 10,
-	host: "localhost",
+	host: "app-db",
 	user: "root",
+	port: "3306",
 	password: "password",
-	database: "notypo_schema"
+	database: "mytype_database"
 });
 
 if (process.env.JAWSDB_URL) {
