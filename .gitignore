@@ -1,5 +1,6 @@
 node_modules
 /client/node_modules
+/server/public
 
 # swap
 [._]*.s[a-w][a-z]
